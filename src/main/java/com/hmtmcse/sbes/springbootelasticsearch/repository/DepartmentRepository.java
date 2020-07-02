@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface DepartmentRepository extends ElasticsearchRepository<Department, String> {
 
-    List<Department> findByFirstName(String firstName);
+    List<Department> findByName(String name);
 
 
 }

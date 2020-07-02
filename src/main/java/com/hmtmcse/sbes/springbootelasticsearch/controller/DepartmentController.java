@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v1/department")
 @RestController
 public class DepartmentController {
 
@@ -25,9 +25,9 @@ public class DepartmentController {
         return departmentRepository.findAll();
     }
 
-    @GetMapping("/find-by-name/{firstName}")
-    public List<Department> findByFirstName(@PathVariable String firstName) {
-        return departmentRepository.findByFirstName(firstName);
+    @GetMapping("/find-by-name/{name}")
+    public List<Department> findByFirstName(@PathVariable String name) {
+        return departmentRepository.findByName(name);
     }
 
 }
